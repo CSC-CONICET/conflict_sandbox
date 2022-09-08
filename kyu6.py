@@ -47,8 +47,17 @@ class YourOrderPlease:
 
     @staticmethod
     def order(sentence):
-        # code here
-        return
+        if not sentence:
+            return ""
+        else:
+            words = sentence.split()
+            result = list(range(len(words)))
+        for word in words:
+            for letter in word:
+                if letter.isdigit():
+                    position = int(letter)
+                    result[position - 1] = word
+        return " ".join(result)
 
 class DuplicateEncoder:
     # The goal of this exercise is to convert a string to a new string where each character in the new string is
