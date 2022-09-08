@@ -70,4 +70,10 @@ class DuplicateEncoder:
 
     @staticmethod
     def duplicate_encode(word):
-        pass
+        encoded = ''
+        for character in word.lower():
+            if word.lower().count(character) == 1:
+                encoded += '('
+            else:
+                encoded += ')'
+        return encoded
