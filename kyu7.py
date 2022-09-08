@@ -45,9 +45,9 @@ class HighestAndLowest:
     #     Output string must be two numbers separated by a single space, and highest number is first.
 
     @staticmethod
-    def high_and_low(numbers):
-        # ...
-        return numbers
+    def high_and_low(numbers):  # z.
+        nn = [int(s) for s in numbers.split(" ")]
+        return "%i %i" % (max(nn), min(nn))
 
 
 class VowelCount:
