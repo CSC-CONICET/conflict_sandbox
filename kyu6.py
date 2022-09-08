@@ -10,7 +10,8 @@ class DetectPangram:
 
     @staticmethod
     def is_pangram(s):
-        return False
+        letter_list = [ch for ch in sorted(set(list(s.lower()))) if ch in ascii_lowercase]
+        return letter_list == list(ascii_lowercase)
 
 
 class TakeATenMinutesWalk:
