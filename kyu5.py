@@ -28,7 +28,12 @@ class TheHashtagGenerator:
     # ""
     @staticmethod
     def generate_hashtag(s):
-        pass
+        ss = [x.strip() for x in s.split() if x.strip() != ""]
+        if len(ss) == 0:
+            return False
+
+        hash = "".join(x[0].upper() + x[1:].lower() for x in ss)
+        return hash if len(hash) < 140 else False
 
 class MovingZerosToTheEnd:
     # Write an algorithm that takes an array and moves all of the zeros to the end,

@@ -50,8 +50,8 @@ class HighestAndLowest:
 
     @staticmethod
     def high_and_low(numbers):
-        # ...
-        return numbers
+        return (lambda x: " ".join((str(min(x)), str(max(x)))))(
+            [int(x) for x in numbers.split(" ")])
 
 
 class VowelCount:

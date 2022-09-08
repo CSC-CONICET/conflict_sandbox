@@ -48,8 +48,7 @@ class YourOrderPlease:
 
     @staticmethod
     def order(sentence):
-        # code here
-        return
+        return " ".join(sorted(sentence.split(), key=lambda w: [int(c) for c in w if c.isdigit()][0]))
 
 class DuplicateEncoder:
     # The goal of this exercise is to convert a string to a new string where each character in the new string is
