@@ -11,7 +11,11 @@ class FriendOrFoe:
 
     @staticmethod
     def friend(x):
-        return x
+        friends = []
+        for person in x:
+            if len(person) == 4:
+                friends.append(person)
+        return friends
 
 
 class RegexValidatePinCode:
