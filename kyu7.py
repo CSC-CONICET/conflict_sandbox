@@ -46,8 +46,15 @@ class HighestAndLowest:
 
     @staticmethod
     def high_and_low(numbers):
-        # ...
-        return numbers
+        nums = numbers.split(" ")
+        mas_alto = nums[0]
+        mas_bajo = nums[0]
+        for num in nums:
+            if int(num) > int(mas_alto):
+                mas_alto = num
+            if int(num) < int(mas_bajo):
+                mas_bajo = num
+        return mas_alto + ' ' + mas_bajo
 
 
 class VowelCount:

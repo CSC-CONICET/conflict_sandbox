@@ -8,7 +8,7 @@ class SimplePigLatin:
     # pig_it('Hello world !')     # elloHay orldway !
 
     def pig_it(text):
-        pass
+        return " ".join([x[1:] + x[0] if x.isalpha() else x for x in text.split()])
 
 class TheHashtagGenerator:
     # The marketing team is spending way too much time typing in hashtags.

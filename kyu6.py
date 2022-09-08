@@ -74,4 +74,5 @@ class DuplicateEncoder:
 
     @staticmethod
     def duplicate_encode(word):
-        pass
+        d = Counter(word.lower())
+        return "".join("(" if d[c] == 1 else ")" for c in word)
