@@ -26,9 +26,9 @@ class TheHashtagGenerator:
     # " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
     # "    Hello     World   "                  =>  "#HelloWorld"
     # ""
-    @staticmethod
-    def generate_hashtag(s):
-        pass
+
+    generate_hashtag = lambda s: (lambda s: False if len(s) == 1 or len(s) > 140 else s)("#" + "".join(
+        "" if l == " " else l.upper() if i == 0 or s[i - 1] == " " else l.lower() for i, l in enumerate(s)))
 
 class MovingZerosToTheEnd:
     # Write an algorithm that takes an array and moves all of the zeros to the end,
