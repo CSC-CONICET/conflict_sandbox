@@ -60,5 +60,11 @@ class ValidParentheses:
 
     @staticmethod
     def valid_parentheses(string):
-        return False
+        # your code here
+        c = []
+        try:
+            [c.append(None) if x == "(" else c.pop() for x in string if x in "()"]
+        except:
+            return False
+        return len(c) == 0
 
