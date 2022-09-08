@@ -57,4 +57,8 @@ class VowelCount:
 
     @staticmethod
     def getCount(sentence):
-        pass
+        num_vowels = 0
+        for char in sentence:
+            if char in "aeiou":
+                num_vowels = num_vowels + 1
+        return num_vowels
