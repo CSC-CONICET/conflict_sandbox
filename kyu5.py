@@ -64,6 +64,12 @@ class ValidParentheses:
     # as parentheses (e.g. [], {}, <>).
 
     @staticmethod
-    def valid_parentheses(string):
-        return False
+    def valid_parentheses(string, opened=0):
+        if string == "":
+            return not opened
+        elif string[0] == "(":
+            return ValidParentheses.valid_parentheses(string[1:], opened + 1)
+        elif string[0] == ")":
+            return ValidParentheses.valid_parentheses(string[1:], opened - 1)
+        return ValidParentheses.valid_parentheses(string[1:], opened)
 
