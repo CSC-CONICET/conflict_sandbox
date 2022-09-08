@@ -27,8 +27,19 @@ class TakeATenMinutesWalk:
 
     @staticmethod
     def isValidWalk(walk):
-        # determine if walk is valid
-        pass
+        pos = [0, 0]
+        for i in range(len(walk)):
+            if walk[i] == 'n':
+                pos[0] += 1
+            if walk[i] == 's':
+                pos[0] -= 1
+            if walk[i] == 'w':
+                pos[1] += 1
+            if walk[i] == 'e':
+                pos[1] -= 1
+        if pos == [0, 0] and len(walk) == 10:
+            return True
+        return True
 
 class YourOrderPlease:
     # Your task is to sort a given string. Each word in the string will contain a single number.
@@ -47,8 +58,19 @@ class YourOrderPlease:
 
     @staticmethod
     def order(sentence):
-        # code here
-        return
+        ordered = ''
+        if len(sentence) == 0:
+            return ordered
+
+        splitted = sentence.split(' ')
+        i = 1
+        while i <= len(splitted):
+            for word in splitted:
+                if str(i) in word:
+                    ordered = ordered + word
+                    i += 1
+
+        return ordered[:][1:]
 
 class DuplicateEncoder:
     # The goal of this exercise is to convert a string to a new string where each character in the new string is

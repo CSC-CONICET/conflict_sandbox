@@ -25,8 +25,8 @@ class RegexValidatePinCode:
     # "a234"   -->  false
 
     @staticmethod
-    def validate_pin(pin):
-        return
+    def friend(x):
+        return [f for f in x if len(f) > 4]
 
 class HighestAndLowest:
     # In this little assignment you are given a string of space separated numbers,

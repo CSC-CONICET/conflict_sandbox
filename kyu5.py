@@ -36,8 +36,8 @@ class MovingZerosToTheEnd:
     #
     # move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]
 
-    def move_zeros(lst):
-        return lst
+    def move_zeros(xs):
+        return [x for x in xs if x != 0] + [x for x in xs if x == 0]
 
 
 class ValidParentheses:
