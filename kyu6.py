@@ -27,8 +27,26 @@ class TakeATenMinutesWalk:
 
     @staticmethod
     def isValidWalk(walk):
-        # determine if walk is valid
-        pass
+        point = [0, 0]
+
+        if len(walk) == 10:
+            for w in walk:
+                if w == 'n':
+                    point[1] += 1
+                if w == 's':
+                    point[1] -= 1
+                if w == 'e':
+                    point[0] += 1
+                if w == 'w':
+                    point[0] += 1
+
+            if point[0] == 0 and point[1] == 0:
+                return True
+            else:
+                return False
+
+        else:
+            return False
 
 class YourOrderPlease:
     # Your task is to sort a given string. Each word in the string will contain a single number.

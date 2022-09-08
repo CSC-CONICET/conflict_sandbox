@@ -26,7 +26,7 @@ class RegexValidatePinCode:
 
     @staticmethod
     def validate_pin(pin):
-        return
+        return (len(pin) == 4) and (pin.isnumeric())
 
 class HighestAndLowest:
     # In this little assignment you are given a string of space separated numbers,

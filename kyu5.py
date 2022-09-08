@@ -7,8 +7,7 @@ class SimplePigLatin:
     # pig_it('Pig latin is cool') # igPay atinlay siay oolcay
     # pig_it('Hello world !')     # elloHay orldway !
 
-    def pig_it(text):
-        pass
+    pig_it = lambda text: sub("(\w)(\w)", '\g<2>\g<1>ay', text)
 
 class TheHashtagGenerator:
     # The marketing team is spending way too much time typing in hashtags.
